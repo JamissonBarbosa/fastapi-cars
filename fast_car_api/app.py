@@ -14,6 +14,10 @@ app.include_router(car_router)
 def read_root():
   return {'status': 'ok'}
 
-@app.get('/cars
-def read_root():
-  return {'status': 'ok'}
+@app.get('/cars')
+def read_car():
+  return {'status': 'cars routes'}
+
+@app.get('/cars/2')
+def read_cars():
+  return {'status': 'cars routes 2'}

@@ -13,3 +13,7 @@ app.include_router(car_router)
 @app.get('/')
 def read_root():
   return {'status': 'ok'}
+
+@app.get('/cars
+def read_root():
+  return {'status': 'ok'}

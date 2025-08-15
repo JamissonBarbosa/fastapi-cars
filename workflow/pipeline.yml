@@ -1,0 +1,24 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  ci:
+    runs-on: 2204-ubuntu-lts
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/pytest@v3
+        with: 
+          python-version: '3.12
+          install-deps: true
+          run-tests: true
+          test-command: cd tests && pytest
+
